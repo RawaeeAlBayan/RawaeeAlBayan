@@ -1,0 +1,301 @@
+/* ================================================= */
+/* === إعدادات أساسية وهوية التصميم (المتغيرات) === */
+/* ================================================= */
+:root {
+    --primary-color: #d6ba1d; /* ذهبي */
+    --secondary-color: #0d214d; /* أزرق داكن */
+    --light-bg-color: #f8f9fa; /* رمادي فاتح للخلفيات */
+    --text-color: #333;
+    --light-text-color: #f8f9fa;
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    direction: rtl;
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
+}
+
+/* ========================================= */
+/* === الهيدر وشريط التصفح (Navbar) === */
+/* ========================================= */
+.site-header {
+    background-color: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.hamburger-menu {
+    display: none; /* مخفي على الشاشات الكبيرة */
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================================== */
+/* === قسم الترحيب (Hero Section) === */
+/* ================================== */
+.hero-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 60px 30px;
+    background-color: var(--white-color);
+    gap: 30px;
+}
+
+.text-content {
+    max-width: 550px;
+}
+
+.main-heading {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.main-paragraph {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.image-content img {
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-section {
+    padding: 80px 30px;
+    background-color: var(--white-color); /* أو يمكنك استخدام var(--light-bg-color) */
+    text-align: center;
+}
+.about-us-section p {
+    max-width: 800px;
+    margin: 0 auto; /* لتوسيط الفقرة */
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* ============================ */
+/* === قسم الخدمات والآراء === */
+/* ============================ */
+.services-section, .testimonials-section {
+    padding: 80px 30px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: var(--secondary-color);
+}
+
+.service-container, .testimonial-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-box, .testimonial-card {
+    background-color: var(--white-color);
+    width: 320px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover, .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.testimonial-card {
+    border-top: 5px solid var(--primary-color);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.client-name {
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: left;
+}
+
+/* ================================== */
+/* === قسم دعوة لاتخاذ إجراء (CTA) === */
+/* ================================== */
+.cta-section {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* ================= */
+/* === الفوتر === */
+/* ================= */
+footer {
+    background-color: #1e2a42;
+    color: #aeb9d4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ======================================= */
+/* === تصميم الجوال (Media Query) === */
+/* ======================================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px; /* ارتفاع الهيدر */
+        left: 0;
+        right: 0;
+        background-color: var(--white-color);
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex; /* إظهار القائمة عند الضغط */
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: block; /* إظهار زر الهامبرغر */
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .main-heading {
+        font-size: 36px;
+    }
+    
+    .service-box, .testimonial-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+.listings-page-section {
+    padding: 80px 30px;
+}
+
+.listings-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* المسافة بين بطاقات العروض */
+}
+
+.listing-cta-button {
+    display: inline-block;
+    background-color: #25D366; /* لون الواتساب الأخضر */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 15px;
+    transition: transform 0.3s ease;
+}
+
+.listing-cta-button:hover {
+    transform: scale(1.05); /* يكبر قليلاً عند مرور الماوس */
+}
